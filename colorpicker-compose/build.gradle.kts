@@ -32,10 +32,8 @@ mavenPublishing {
 kotlin {
   androidTarget { publishLibraryVariants("release") }
   jvm("desktop")
-  iosX64()
   iosArm64()
   iosSimulatorArm64()
-  macosX64()
   macosArm64()
   js(IR) {
     browser()
@@ -58,12 +56,10 @@ kotlin {
         group("darwin") {
           group("apple") {
             group("ios") {
-              withIosX64()
               withIosArm64()
               withIosSimulatorArm64()
             }
             group("macos") {
-              withMacosX64()
               withMacosArm64()
             }
           }
@@ -79,9 +75,9 @@ kotlin {
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation(compose.runtime)
-        implementation(compose.foundation)
-        implementation(compose.ui)
+        implementation(libs.compose.runtime)
+        implementation(libs.compose.foundation)
+        implementation(libs.compose.ui)
       }
     }
   }
