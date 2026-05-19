@@ -1,17 +1,14 @@
 [versions]
-agp = "8.13.2"
-dokka = "2.1.0"
+agp = "9.1.1"
+dokka = "2.2.0"
 nexusPlugin = "0.36.0"
 kotlin = "2.3.21"
 kotlinBinaryCompatibility = "0.18.1"
-compose-plugin = "1.11.0-beta03"
-compose = "1.11.0-beta01"
-composeMaterial = "1.7.3"
-composeMaterial3 = "1.11.0-alpha05"
+compose-plugin = "1.10.3"
 jvmTarget = "17"
-androidxActivity = "1.12.3"
+androidxActivity = "1.13.0"
 androidxTest = "1.7.0"
-androidxNavigation = "2.9.1"
+androidxNavigation = "2.9.2"
 imagePicker = "0.5.2"
 baselineProfiles = "1.4.1"
 macroBenchmark = "1.4.1"
@@ -41,15 +38,14 @@ baseline-profile = { id = "androidx.baselineprofile", version.ref = "androidxMac
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
-compose-components-ui-tooling-preview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "compose" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
-compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "composeMaterial" }
-compose-material-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "composeMaterial" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose" }
 image-picker = { group = "io.github.onseok", name = "peekaboo-image-picker", version.ref = "imagePicker" }
+
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-plugin" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-plugin" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-plugin" }
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "compose-plugin" }
+compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "compose-plugin" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-plugin" }
 
 # unit test
 androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTest" }
